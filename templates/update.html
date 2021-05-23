@@ -1,0 +1,14 @@
+{% extends 'index.html' %}
+{% block content %}
+<div class="row">
+  <div class="col-sm-8">
+  <h4 class="alert alert-info">Update User Information</h4>
+  <form action="" method="post">
+      {% csrf_token %}
+      {{form.as_p}}
+      <input type="submit" class="btn btn-success" value="Update">
+      <a href="{% url 'userdetail' %}" class="btn btn-info">Back to detail</a>
+  </form>
+ </div>
+</div>
+{% endblock content %}
